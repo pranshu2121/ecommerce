@@ -10,23 +10,10 @@
          [rowHeight]="rowHeight">
          
          <mat-grid-tile>
-          <app-product-box class="w-full" [fullWidth]="cols===1"></app-product-box>
+          <app-product-box 
+          (addToCart)="OnAddToCart($event)"
+          class="w-full" [fullWidth]="cols===1"></app-product-box>
          </mat-grid-tile>
-         <mat-grid-tile>
-            <app-product-box class="w-full" [fullWidth]="cols===1"></app-product-box>
-           </mat-grid-tile>
-           <mat-grid-tile>
-            <app-product-box class="w-full" [fullWidth]="cols===1"></app-product-box>
-           </mat-grid-tile>
-           <mat-grid-tile>
-            <app-product-box class="w-full" [fullWidth]="cols===1"></app-product-box>
-           </mat-grid-tile>
-           <mat-grid-tile>
-            <app-product-box class="w-full" [fullWidth]="cols===1"></app-product-box>
-           </mat-grid-tile>
-           <mat-grid-tile>
-            <app-product-box class="w-full" [fullWidth]="cols===1"></app-product-box>
-           </mat-grid-tile>
-         </mat-grid-list>
+        </mat-grid-list>
     </mat-drawer-content>
 </mat-drawer-container>

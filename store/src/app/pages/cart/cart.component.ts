@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cart, CartItem } from 'src/app/models/cart.model';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -7,6 +8,8 @@ import { Cart, CartItem } from 'src/app/models/cart.model';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+
+  constructor(private _cartS:CartService){}
  
   cart: Cart = {
     items: [{
@@ -41,10 +44,6 @@ export class CartComponent implements OnInit {
   }
 
   getTotal(items: Array<CartItem>):number{
-   return items.
-    map((item)=>item.price * item.quantity).
-    reduce((prev,current)=> prev + current,0)
-
-  }
-
+    return this._cartS.getTotal(items);
+   }
 }
