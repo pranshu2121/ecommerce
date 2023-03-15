@@ -21,7 +21,6 @@ export class HeaderComponent {
 
   set cart(cart:Cart){
     this._cart=cart;
-
     this.itemsQuantity=cart.items
     .map((item)=>item.quantity)
     .reduce((prev,current)=> prev + current, 0);
@@ -32,7 +31,7 @@ export class HeaderComponent {
    }
 
   OnClearCart(){
-    
+    this._cartS.clearCart();
   }
 
   

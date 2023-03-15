@@ -11,6 +11,7 @@ import { ProductHeaderComponent } from './components/product-header/product-head
 import { FiltersComponent } from './pages/filters/filters.component';
 import { ProductBoxComponent } from './pages/product-box/product-box.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CartComponent } from './pages/cart/cart.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
